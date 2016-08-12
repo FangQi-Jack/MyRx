@@ -40,6 +40,7 @@ public abstract class RxSubscriber<T> extends Subscriber<T> {
 
         if (showDialog()) {
             mDialog = new LoadingDialog(mContext).createDialog();
+            mDialog.setTitle(msg);
             mDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
                 public void onCancel(DialogInterface dialogInterface) {
