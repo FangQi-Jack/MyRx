@@ -1,11 +1,8 @@
 package com.jackfangqi.myrxframework.rx;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 
 import com.jackfangqi.myrxframework.tools.NetworkUtil;
-import com.jackfangqi.myrxframework.ui.LoadingDialog;
 
 import rx.Subscriber;
 
@@ -18,51 +15,19 @@ import rx.Subscriber;
  */
 public abstract class RxSubscriber<T> extends Subscriber<T> {
     private Context mContext;
-    private String msg;
-    private AlertDialog mDialog;
 
     public RxSubscriber(Context context) {
-        this(context, "请稍后……");
-    }
-
-    public RxSubscriber(Context context, String msg) {
         this.mContext = context;
-        this.msg = msg;
-    }
-
-    protected boolean showDialog() {
-        return true;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        if (showDialog()) {
-            mDialog = new LoadingDialog(mContext).createDialog();
-            mDialog.setTitle(msg);
-            mDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                @Override
-                public void onCancel(DialogInterface dialogInterface) {
-                    if (!isUnsubscribed())
-                        unsubscribe();
-                }
-            });
-            mDialog.show();
-        }
     }
 
     @Override
     public void onCompleted() {
-        if (showDialog())
-            mDialog.dismiss();
+
     }
 
     @Override
     public void onError(Throwable e) {
         e.printStackTrace();
-        if (showDialog())
-            mDialog.dismiss();
         if (!NetworkUtil.isNetworkConnected(mContext)) {
             _onError("请检查您的网络连接");
         } else if (e instanceof ServerException) {
