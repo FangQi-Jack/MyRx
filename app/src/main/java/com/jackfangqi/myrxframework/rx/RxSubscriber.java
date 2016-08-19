@@ -2,7 +2,7 @@ package com.jackfangqi.myrxframework.rx;
 
 import android.content.Context;
 
-import com.jackfangqi.myrxframework.tools.NetworkUtil;
+import com.jackfangqi.commonutil.utils.NetworkUtil;
 
 import rx.Subscriber;
 
