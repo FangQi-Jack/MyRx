@@ -2,8 +2,6 @@ package com.jackfangqi.myrxframework.rx;
 
 import android.content.Context;
 
-import com.jackfangqi.commonutil.utils.NetworkUtil;
-
 import rx.Subscriber;
 
 /**
@@ -28,13 +26,13 @@ public abstract class RxSubscriber<T> extends Subscriber<T> {
     @Override
     public void onError(Throwable e) {
         e.printStackTrace();
-        if (!NetworkUtil.isNetworkConnected(mContext)) {
-            _onError("请检查您的网络连接");
-        } else if (e instanceof ServerException) {
-            _onError(e.getMessage());
-        } else {
-            _onError("请求失败");
-        }
+//        if (!NetworkUtil.isNetworkConnected(mContext)) {
+//            _onError("请检查您的网络连接");
+//        } else if (e instanceof ServerException) {
+//            _onError(e.getMessage());
+//        } else {
+//            _onError("请求失败");
+//        }
     }
 
     @Override

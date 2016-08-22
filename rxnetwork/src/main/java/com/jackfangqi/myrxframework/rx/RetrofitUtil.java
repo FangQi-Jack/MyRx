@@ -1,6 +1,6 @@
 package com.jackfangqi.myrxframework.rx;
 
-import com.jackfangqi.commonutil.utils.LogUtil;
+import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
@@ -58,7 +58,7 @@ public class RetrofitUtil {
             Headers headers = request.headers();
             RequestBody body = request.body();
             HttpUrl url = request.url();
-            LogUtil.d(LOG_TAG, "request method = " + method
+            Log.d(LOG_TAG, "request method = " + method
                     + "\nheaders = " + headers.toString()
                     + "\nrequest body = " + body
                     + "\nrequest url = " + url);

@@ -21,3 +21,31 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    androidBuildToolsVersion = "24.0.1"
+    androidMinSdkVersion = 14
+    androidTargetSdkVersion = 24
+    androidCompileSdkVersion = 24
+    appVersionCode = 1
+    appVersionName = "1.0"
+}
+
+ext.versions = [
+        supportLibs: '24.1.1',
+        okHttpLoggingVersion: '3.2.0',
+        retrofitVersion: '2.1.0'
+]
+
+ext.libraries = [
+        testJUnit: "junit:junit:4.12",
+        supportCompatV7: "com.android.support:appcompat-v7:$versions.supportLibs",
+        okHttpLogging: "com.squareup.okhttp3:logging-interceptor:$versions.okHttpLoggingVersion",
+        retrofit: "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
+        retrofitConverter: "com.squareup.retrofit2:retrofit-converters:$versions.retrofitVersion",
+        retrofitAdapter: "com.squareup.retrofit2:retrofit-adapters:$versions.retrofitVersion",
+        retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion",
+        retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava:$versions.retrofitVersion",
+        rxJava: "io.reactivex:rxjava:1.1.8",
+        rxAndroid: "io.reactivex:rxandroid:1.2.1"
+]

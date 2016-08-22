@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
+apply from: "moduleConfig.gradle"
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 24
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
     }
     buildTypes {
         release {
@@ -18,15 +19,14 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':commonutil')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:retrofit-converters:2.1.0'
-    compile 'com.squareup.retrofit2:retrofit-adapters:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'io.reactivex:rxjava:1.1.8'
-    compile 'io.reactivex:rxandroid:1.2.1'
+    testCompile libraries.testJUnit
+    compile libraries.supportCompatV7
+    compile libraries.okHttpLogging
+    compile libraries.retrofit
+    compile libraries.retrofitConverter
+    compile libraries.retrofitAdapter
+    compile libraries.retrofitGsonConverter
+    compile libraries.retrofitRxJavaAdapter
+    compile libraries.rxJava
+    compile libraries.rxAndroid
 }
