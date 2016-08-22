@@ -22,6 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Date: 2016/8/22 16:20
  */
 public class RetrofitUtil {
+    private static final String LOG_TAG = RetrofitUtil.class.getSimpleName();
+
     // TODO change to real base url
     private static String apiBaseUrl = "";
 
@@ -56,7 +58,7 @@ public class RetrofitUtil {
             Headers headers = request.headers();
             RequestBody body = request.body();
             HttpUrl url = request.url();
-            LogUtil.d("checkRetrofitRequest", "request method = " + method
+            LogUtil.d(LOG_TAG, "request method = " + method
                     + "\nheaders = " + headers.toString()
                     + "\nrequest body = " + body
                     + "\nrequest url = " + url);
