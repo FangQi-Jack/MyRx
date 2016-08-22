@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_request_dialog_cancel">取消</string>
+    <string name="permission_request_dialog_ok">去授权</string>
+    <string name="loading_dialog_default_msg">加载中……</string>
+</resources>

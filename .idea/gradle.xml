@@ -9,12 +9,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/commonutil" />
             <option value="$PROJECT_DIR$/rxnetwork" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/commonutil" />
             <option value="$PROJECT_DIR$/rxnetwork" />
           </set>
         </option>

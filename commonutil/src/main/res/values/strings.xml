@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CommonUtil</string>
+
+    <string name="permission_request_dialog_cancel">@android:string/cancel</string>
+    <string name="permission_request_dialog_ok">SETTING</string>
+
+    <string name="loading_dialog_default_msg">loading…</string>
+</resources>

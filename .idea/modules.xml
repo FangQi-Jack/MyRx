@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyRxFramework.iml" filepath="$PROJECT_DIR$/MyRxFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonutil/commonutil.iml" filepath="$PROJECT_DIR$/commonutil/commonutil.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxnetwork/rxnetwork.iml" filepath="$PROJECT_DIR$/rxnetwork/rxnetwork.iml" />
     </modules>
   </component>

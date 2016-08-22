@@ -1,1 +1,1 @@
-include ':rxnetwork'
+include ':rxnetwork', ':commonutil'
