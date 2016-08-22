@@ -40,6 +40,7 @@ ext.versions = [
 ext.libraries = [
         testJUnit: "junit:junit:4.12",
         supportCompatV7: "com.android.support:appcompat-v7:$versions.supportLibs",
+        supportV4: "com.android.support:support-v4:$versions.supportLibs",
         okHttpLogging: "com.squareup.okhttp3:logging-interceptor:$versions.okHttpLoggingVersion",
         retrofit: "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
         retrofitConverter: "com.squareup.retrofit2:retrofit-converters:$versions.retrofitVersion",
